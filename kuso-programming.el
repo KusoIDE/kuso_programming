@@ -27,6 +27,14 @@
 
 (global-auto-complete-mode t)
 
+;; ac-dabbrev configuratio ----------------------------------------
+(require 'ac-dabbrev)
+(setq ac-sources
+      (list ac-source-dabbrev))
+(global-set-key (kbd "<backtab>") 'dabbrev-expand)
+
+
+
 ;; Yasnippet configurations ---------------------------------------
 ;(add-to-list 'load-path (concat default-directory "../yasnippet"))
 
