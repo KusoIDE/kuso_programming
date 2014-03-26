@@ -67,3 +67,11 @@
 
 (global-git-gutter-mode t)
 (set-face-foreground 'indent-guide-face "#bbb")
+
+;; Flycheck -------------------------------------------------------
+(add-hook 'after-init-hook #'global-flycheck-mode)
+
+;; Flyspell -------------------------------------------------------
+(require 'flyspell)
+(setq flyspell-issue-message-flg nil)
+(ac-flyspell-workaround)
