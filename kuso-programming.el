@@ -65,7 +65,14 @@
 (setq pe/width 30)
 (global-set-key (kbd "\C-c q") 'project-explorer-open)
 
+;; Git Gutter Fringe -------------------------------------------------------
+(require 'git-gutter-fringe)
 (global-git-gutter-mode t)
+(setq-default left-fringe-width  10)
+(setq git-gutter-fr:side (quote left-fringe))
+(setq git-gutter:hide-gutter nil)
+(setq git-gutter:lighter "GG")
+(setq linum-format (quote dynamic))
 (set-face-foreground 'indent-guide-face "#bbb")
 
 ;; Flycheck -------------------------------------------------------
